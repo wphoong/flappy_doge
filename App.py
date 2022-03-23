@@ -137,7 +137,7 @@ class Doge:
 		inputs = [self.player_y+40, pipes[0].pipe_x, pipes[0].pipe_y, pipes[1].pipe_y+320]
 		inputs = pd.DataFrame([inputs], columns=['0','1','2','3'])
 		inputs['diff'] = inputs['0'] > inputs['2']
-		inputs['target'] = in puts['diff'].apply(self.convert_diff)
+		inputs['target'] = inputs['diff'].apply(self.convert_diff)
 		self.data = pd.concat([self.data, inputs])
 		
 	def think(self, pipes):
