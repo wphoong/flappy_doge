@@ -166,7 +166,7 @@ def main():
 	game.create_pipe(Pipe('top'))
 
 	# create player
-	population = 50
+	population = 30
 	for _ in range(10):
 		game.create_player(Doge())
 
@@ -206,8 +206,8 @@ def main():
 		for player in game.player_arr:
 			screen.blit(player.player, (player.player_x, player.player_y))
 
-		textsurface = myfont.render(str(game.score), True, (0, 0, 0))
-		screen.blit(textsurface, (20,20))
+		# textsurface = myfont.render(str(game.score), True, (0, 0, 0))
+		# screen.blit(textsurface, (20,20))
 
 		pygame.display.flip()
 		pygame.time.Clock().tick(fps)
